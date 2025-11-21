@@ -1,1 +1,23 @@
+/* 1. <body> is a flex container arranged vertically */
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+/* 2. <main> is a flex container arranged horizontally */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* ensures main grows automatically */
+}
+
+/* 3. Divide space: article = 2/3, aside = 1/3 */
+article {
+    flex: 2;
+    overflow-y: auto; /* allows scrolling */
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto; /* allows scrolling */
+}
