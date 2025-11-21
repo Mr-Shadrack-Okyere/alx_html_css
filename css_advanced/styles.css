@@ -1,118 +1,180 @@
-/* ------------------------------- */
-/* OVERRIDE DEFAULT STYLES TO MATCH FIGMA */
-/* ------------------------------- */
+/* ================================ */
+/* 3. QUOTE SECTION (Figma) */
+/* ================================ */
 
-/* Make header transparent and positioned above the hero */
-header {
-    background: transparent !important;
-    box-shadow: none !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 60px !important;
-    z-index: 1000;
-}
-
-header nav ul li a {
-    color: white !important;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* ------------------------------- */
-/* HERO SECTION (Figma) */
-/* ------------------------------- */
-
-main section:first-of-type {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-
+.quote-section {
+    background: #C271FF;
+    padding: 80px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    text-align: center;
+    align-items: center;
     color: white;
-
-    /* IMPORTANT: Change this to your actual hero image path */
-    background: url("./images/hero.jpg") center/cover no-repeat;
 }
 
-/* Dark gradient overlay */
-main section:first-of-type::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
-    z-index: 0;
+.quote-wrapper {
+    display: flex;
+    gap: 30px;
+    width: 70%;
+    align-items: center;
 }
 
-/* Make sure hero content stays above the overlay */
-main section:first-of-type > div {
-    position: relative;
-    z-index: 1;
+.quote-wrapper img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Big heading text */
-main section:first-of-type h1 {
-    font-size: 85px !important;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* SMILES – GRIN – LAUGH */
-main section:first-of-type span {
-    margin: 0 10px;
+.quote-text {
     font-size: 18px;
-    font-weight: 600;
-    color: white !important;
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 600px;
 }
 
-/* Purple button from Figma */
-main section:first-of-type button {
-    background: #C271FF !important;
-    border-radius: 30px;
-    padding: 15px 45px !important;
-    font-size: 16px;
+.quote-author {
+    margin-top: 15px;
+}
+
+.quote-author h3 {
+    margin: 0;
+    font-size: 20px;
     font-weight: 700;
-    margin-top: 20px;
 }
 
-/* ------------------------------- */
-/* "Learn from the pros" styling */
-/* ------------------------------- */
+.quote-author p {
+    margin: 0;
+    opacity: 0.9;
+    font-style: italic;
+}
 
-main section:first-of-type h2 {
-    margin-top: 140px;
-    font-size: 30px;
+/* ================================ */
+/* 4. VIDEOS LIST SECTION */
+/* ================================ */
+
+.videos-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.videos-section h2 {
+    font-size: 32px;
     font-weight: 400;
+    margin-bottom: 50px;
 }
 
-main section:first-of-type h2::after {
-    content: "";
-}
-
-main section:first-of-type h2 span {
+.videos-section h2 span {
     color: #C271FF;
     font-weight: 700;
 }
 
-/* Pros list */
-main section:first-of-type > div:last-child > div {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 40px;
+/* Tutorial Grid */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 85%;
+    margin: auto;
 }
 
-main section:first-of-type img {
-    width: 150px;
-    height: 150px;
+/* Video card */
+.video-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.video-card img {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    position: relative;
+}
+
+/* Play button overlay */
+.video-thumb {
+    position: relative;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+}
+
+/* Video title */
+.video-card h3 {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Small description */
+.video-card p {
+    margin: 0 15px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Author + avatar */
+.video-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px;
+}
+
+.video-author img {
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
+}
+
+.video-author span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #C271FF;
+}
+
+/* Rating + Duration */
+.video-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.video-info .stars i {
+    color: #C271FF !important;
+}
+
+.video-info .duration {
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 700;
+}
+
+/* RESPONSIVE FIXES */
+@media screen and (max-width: 992px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
 }
