@@ -1,180 +1,174 @@
 /* ================================ */
-/* 3. QUOTE SECTION (Figma) */
+/* 5. MEMBERSHIP SECTION (Figma) */
 /* ================================ */
 
-.quote-section {
-    background: #C271FF;
+.membership-section {
+    background: #071629;
+    text-align: center;
     padding: 80px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
 }
 
-.quote-wrapper {
-    display: flex;
-    gap: 30px;
-    width: 70%;
-    align-items: center;
-}
-
-.quote-wrapper img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.quote-text {
-    font-size: 18px;
-    line-height: 1.6;
-    font-style: italic;
-    max-width: 600px;
-}
-
-.quote-author {
-    margin-top: 15px;
-}
-
-.quote-author h3 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.quote-author p {
-    margin: 0;
-    opacity: 0.9;
-    font-style: italic;
-}
-
-/* ================================ */
-/* 4. VIDEOS LIST SECTION */
-/* ================================ */
-
-.videos-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.videos-section h2 {
+.membership-section h2 {
     font-size: 32px;
-    font-weight: 400;
     margin-bottom: 50px;
 }
 
-.videos-section h2 span {
+.membership-section h2 span {
     color: #C271FF;
     font-weight: 700;
 }
 
-/* Tutorial Grid */
-.videos-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    width: 85%;
-    margin: auto;
+.membership-features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
 }
 
-/* Video card */
-.video-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    padding-bottom: 15px;
-    text-align: left;
+.membership-feature {
+    max-width: 200px;
 }
 
-.video-card img {
-    width: 100%;
-    height: 180px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover;
-    position: relative;
-}
-
-/* Play button overlay */
-.video-thumb {
-    position: relative;
-}
-
-.play-btn {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+.membership-feature img {
     width: 60px;
-    height: 60px;
+    margin-bottom: 15px;
 }
 
-/* Video title */
-.video-card h3 {
-    margin: 15px;
-    font-size: 20px;
+.membership-feature h3 {
+    font-size: 18px;
     font-weight: 700;
 }
 
-/* Small description */
-.video-card p {
-    margin: 0 15px;
+.membership-feature p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Register button */
+.membership-section .btn-register {
+    background: #C271FF;
+    padding: 12px 40px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.membership-section .btn-register:hover {
+    opacity: 0.85;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .membership-features {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+/* ================================ */
+/* 6. FAQ SECTION (Figma) */
+/* ================================ */
+
+.faq-section {
+    padding: 80px 0;
+    background: white;
+    color: #071629;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.faq-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 60px 40px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
     font-size: 14px;
     opacity: 0.7;
 }
 
-/* Author + avatar */
-.video-author {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 15px;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .faq-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
-.video-author img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+
+/* ================================ */
+/* 7. FOOTER (Figma) */
+/* ================================ */
+
+.footer {
+    background: #071629;
+    padding: 50px 0;
+    color: white;
 }
 
-.video-author span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #C271FF;
-}
-
-/* Rating + Duration */
-.video-info {
+.footer-content {
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 15px;
 }
 
-.video-info .stars i {
-    color: #C271FF !important;
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.video-info .duration {
+.footer-left img {
+    width: 40px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right img {
+    width: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.footer-right img:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.4;
     font-size: 14px;
-    color: #C271FF;
-    font-weight: 700;
 }
 
-/* RESPONSIVE FIXES */
-@media screen and (max-width: 992px) {
-    .videos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .videos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .quote-wrapper {
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .footer-content {
         flex-direction: column;
-        text-align: center;
+        gap: 20px;
     }
 }
