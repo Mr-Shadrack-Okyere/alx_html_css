@@ -1,3 +1,7 @@
+/* ================================
+   FLEXBOX LAYOUT (REQUIRED PART)
+   ================================ */
+
 /* Make the body a vertical flex container */
 body {
     display: flex;
@@ -15,25 +19,100 @@ main {
 article {
     flex: 2;
     overflow-y: auto; /* scroll if needed */
-    padding: 10px;
+    padding: 15px;
+    background: #ffffff;
 }
 
 /* Aside takes 1/3 of the page width */
 aside {
     flex: 1;
-    overflow-y: auto; /* scroll if needed */
-    padding: 10px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #fafafa;
+    border-left: 2px solid #eee;
 }
 
-/* Optional improvements (not required but look nice) */
+/* ================================
+   HEADER & NAVIGATION STYLING
+   (ALLOWED EXTRA STYLING)
+   ================================ */
+
+header {
+    background: #f8f8f8;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Remove list bullets and align items horizontally */
 header ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
+/* Navigation links */
 header ul li a {
     text-decoration: none;
-    color: inherit;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+header ul li a:hover {
+    color: #0077cc;
+}
+
+/* Logo styling (unicode icon) */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ================================
+   FOOTER STYLING
+   ================================ */
+
+footer {
+    background: #f8f8f8;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* ================================
+   ARTICLE TYPOGRAPHY STYLING
+   (YOU ARE FREE HERE)
+   ================================ */
+
+article h1,
+article h2,
+article h3 {
+    color: #222;
+    margin-top: 20px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Tables styling inside article */
+article table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+article table th,
+article table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+article table th {
+    background: #f0f0f0;
 }
