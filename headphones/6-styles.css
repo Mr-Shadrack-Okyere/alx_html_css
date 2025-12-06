@@ -1,0 +1,54 @@
+/* OUR RESULTS */
+.results {
+    color: white;
+    padding: 140px 0;
+    text-align: center;
+    background: var(--dark);
+    position: relative;
+}
+
+.results .overlay {
+    display: none;
+}
+
+.pentagons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.pentagon {
+    width: 140px;
+    height: 140px;
+    background: var(--pink);
+    clip-path: polygon(
+        50% 0%,
+        100% 38%,
+        82% 100%,
+        18% 100%,
+        0% 38%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.pentagon p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.pentagon span {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .pentagons {
+        flex-direction: column;
+    }
+}
