@@ -1,0 +1,146 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: #111;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Desktop nav */
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    transition: color .3s;
+}
+.nav-links a:hover { color: #FF6565; }
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.mobile-menu a {
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu.show {
+    display: flex;
+    animation: fadeIn .3s ease forwards;
+}
+
+/* Smooth dropdown */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO */
+.hero {
+    background: url('images/headphones_hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* BUTTON */
+.cta-btn {
+    background: #FF6565;
+    padding: 12px 25px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    margin: 20px 0;
+    transition: opacity .3s;
+}
+.cta-btn:hover { opacity: 0.9; }
+
+/* ITEMS ROW */
+.items-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ANIMATION FOR WHAT WE DO */
+.item {
+    max-width: 250px;
+    transition: transform .4s;
+}
+.item:hover {
+    transform: scale(1.12);
+}
+
+/* RESULTS BOUNCE */
+.result-box {
+    border: 3px solid #FF6565;
+    padding: 40px;
+    border-radius: 10px;
+    width: 160px;
+}
+.bounce {
+    animation: bounceAnim 2.5s infinite ease-in-out;
+}
+@keyframes bounceAnim {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* MOBILE (480px) */
+@media (max-width: 480px) {
+
+    header { padding: 20px; }
+
+    .nav-links {
+        display: none; /* Hide desktop nav */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger */
+    }
+}
