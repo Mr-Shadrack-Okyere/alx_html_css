@@ -1,0 +1,155 @@
+/* ---------------- GLOBAL ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    background-color: #111;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    position: absolute;
+    width: 100%;
+}
+
+header .nav-links a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+header .nav-links a:hover {
+    color: #FF6565;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    background: url('images/headphones_hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 40px;
+    background-color: #FF6565;
+    color: white;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-desc {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #ddd;
+}
+
+/* ---------------- WHAT WE DO ---------------- */
+.items-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.item {
+    max-width: 250px;
+    padding: 20px;
+    transition: transform .4s ease, opacity .4s ease;
+}
+
+/* 🔥 Hover animation */
+.item:hover {
+    transform: scale(1.12);
+    opacity: 0.85;
+}
+
+/* 🔥 Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp .9s ease forwards;
+}
+
+.reveal:nth-child(2) { animation-delay: .2s; }
+.reveal:nth-child(3) { animation-delay: .4s; }
+.reveal:nth-child(4) { animation-delay: .6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- OUR RESULTS ---------------- */
+.results .result-box {
+    border: 3px solid #FF6565;
+    padding: 40px;
+    border-radius: 10px;
+    width: 160px;
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+/* 🔥 Bounce animation (always active) */
+.bounce {
+    animation: bounceAnim 2.5s infinite ease-in-out;
+}
+
+@keyframes bounceAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Hover boost */
+.result-box:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #bbb;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+}
