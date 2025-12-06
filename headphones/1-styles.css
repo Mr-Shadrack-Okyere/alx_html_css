@@ -1,0 +1,197 @@
+/* -----------------------------------
+   RESET + VARIABLES
+------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #FF6565;
+    --white: #ffffff;
+    --max-width: 1000px;
+    --font-main: "Source Sans Pro", sans-serif;
+}
+
+/* -----------------------------------
+   GLOBAL
+------------------------------------*/
+body {
+    font-family: var(--font-main);
+    color: var(--white);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* -----------------------------------
+   HEADER (same as previous task)
+------------------------------------*/
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+    color: var(--pink);
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    height: 3px;
+    background: var(--white);
+}
+
+/* -----------------------------------
+   HERO (same as previous task)
+------------------------------------*/
+.hero {
+    height: 100vh;
+    background: url("images/headphones_hero_1.jpg") center/cover no-repeat;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 650px;
+}
+
+.cta-btn {
+    background: var(--pink);
+    padding: 12px 30px;
+    color: var(--white);
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+    opacity: 0.9;
+}
+
+/* -----------------------------------
+   WHAT WE DO SECTION
+------------------------------------*/
+.what-we-do {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ffffff;
+    color: #000;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.what-we-do .description {
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1 1 calc(25% - 20px);
+    padding: 20px;
+}
+
+.icon {
+    font-size: 70px;
+    color: var(--pink);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* -----------------------------------
+   MOBILE (max 480px)
+------------------------------------*/
+@media (max-width: 480px) {
+
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .icon {
+        font-size: 55px;
+    }
+}
